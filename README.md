@@ -29,3 +29,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 ### Follow along video link:
 https://coursetro.com/posts/code/20/Angular-2-Services-Tutorial---Understanding-&-Creating-Them
+
+## My Notes:
+1. In Github create a new repo
+2. Go to Project Location
+3. In Terminal create a New Project:  ng new project-name
+4. cd into new project folder
+5. git init
+6. npm init
+7. npm install
+8. Open project in Atom: atom .
+9. 
