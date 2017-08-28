@@ -31,12 +31,32 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 https://coursetro.com/posts/code/20/Angular-2-Services-Tutorial---Understanding-&-Creating-Them
 
 ## My Notes:
-1. In Github create a new repo
-2. Go to Project Location
-3. In Terminal create a New Project:  ng new project-name
-4. cd into new project folder
-5. git init
-6. npm init
-7. npm install
-8. Open project in Atom: atom .
-9. 
+ 1. In Github create a new repo
+ 2. Go to Project Location
+ 3. In Terminal create a New Project:  ng new project-name
+ 4. cd into new project folder
+ 5. git init
+ 6. npm init
+ 7. npm install
+ 8. Open project in Atom: atom .
+ 9. in the 'app' folder in your project, create a new service file: example - 'example.service.ts'
+10. In the example.service.ts file, add:
+    - import { Injectable } from '@angular/core';
+    - @Injectable()
+    - export class ExampleService {
+      someMethod() {
+        return 'Hey';
+      }
+    }
+    - Inside the export class is where you can add all of your methods
+11. In the app.component.ts file, add:
+    - import { ExampleService } from './example.services';
+    - to the @Component add: providers: [ExampleService]
+    - export class AppComponent {
+        title: string;
+        constructor(private (add underscore here)exampleService: ExampleService){
+        }
+        ngOnInit(){
+            this.title = this.(add underscore here)exampleService.someMethod();
+        }
+        }   
